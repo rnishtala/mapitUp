@@ -1,0 +1,55 @@
+<!doctype html>
+<!-- Declares mapitUp as the starting Angular module -->
+<html class="no-js" ng-app="mapitUp">
+<head>
+    <meta charset="utf-8">
+    <title>Map it Up</title>
+    <meta name="description" content="Integrate Google maps with app">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <!-- Holder JS -->
+    <script src="../bower_components/holderjs/holder.js"></script>
+    <!-- Google Maps API -->
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB_TzXLdb494cxgKf3wjDLBTlO-ImC_kuM"></script>
+    <!-- Modernizr -->
+    <!--script src="../bower_components/modernizr/bin/modernizr"></script-->
+    <!-- JS Source -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/addCtrl.js"></script>
+    <script src="js/queryCtrl.js"></script>
+    <script src="js/gservice.js"></script>
+</head>
+<body>
+  <div class="container">
+      <div class="header">
+          <ul class="nav nav-pills pull-right">
+              <li active><a href ="/#/join">Join a meetup</a></li>
+              <li disabled><a href="/#/find">Find a meetup</a></li>
+              <li disabled><a href="">Start a meetup</a></li>
+          </ul>
+          <h3 class "text-muted">Map It Up</h3>
+      </div>
+      <!-- Map and Side panel -->
+      <div class="row content">
+          <!-- Google Map -->
+          <div class="col-md-7">
+              <div id="map" style="width:645px; height:645px"></div>
+          </div>
+          <!-- Side Panel  Now Handled by ng-view -->
+          <div ng-view></div>
+
+
+      </div>
+      <hr/>
+      <div class="footer">
+          <p class="text-center"><span class="glyphicon glyphicon-check"></span>Created by Raj</p>
+      </div>
+      </div>
+  </body>
+</html>
